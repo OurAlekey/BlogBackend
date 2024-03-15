@@ -12,10 +12,10 @@ public class TbUsuario {
     @Column(name = "id_usuario", nullable = false)
     private Integer idUsuario;
 
-    @Column(name = "nombre", nullable = false, length = 255)
+    @Column(name = "nombre", nullable = false)
     private String nombre;
 
-    @Column(name = "apellido", nullable = false, length = 255)
+    @Column(name = "apellido", nullable = false)
     private String apellido;
 
     @Column(name = "fecha_nacimiento", nullable = false)

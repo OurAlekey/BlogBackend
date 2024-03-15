@@ -47,14 +47,5 @@ public class TbUsuarioRepository implements UsuarioRepository {
         return mapper.toUsuario(crud.save(tbUser));
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        TbUsuario userEntity = crud.findByUsuario(email);
 
-        if (userEntity == null) {
-            throw new UsernameNotFoundException(email);
-        }
-
-        return new User( userEntity.getUsuario(), userEntity.getContrasena(), new ArrayList<>());
-   }
 }

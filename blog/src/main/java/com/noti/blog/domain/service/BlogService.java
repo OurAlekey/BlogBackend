@@ -16,6 +16,7 @@ public class BlogService implements  UserDetailsService {
     UsuarioService UsuarioService;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        System.out.println(username);
         Usuario usuario =  UsuarioService.getUserByUsuario(username);
         return new User(usuario.getUsuario(), usuario.getContrasena(),new ArrayList<>());
     }

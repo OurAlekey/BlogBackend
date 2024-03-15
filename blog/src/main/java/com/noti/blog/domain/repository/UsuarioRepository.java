@@ -6,12 +6,12 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import java.util.List;
 import java.util.Optional;
 
-public interface UsuarioRepository extends UserDetailsService {
+public interface UsuarioRepository  {
     public Usuario getUsuario (String usuario);
     public Optional<Usuario> getId(Integer id);
     public List<Usuario> getAll();
     public Usuario save(Usuario usuario);
 
-    public UserDetails loadUserByUsername(String email);
+
 
 }

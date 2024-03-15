@@ -39,7 +39,5 @@ public class UsuarioService {
         return repository.getAll();
     }
 
-    public UserDetails loadUserByUsername(String email){
-        return  repository.loadUserByUsername(email);
-    }
+
 }
