@@ -40,11 +40,9 @@ public class TitutloService {
     public  Titulo save(Titulo titulo){
         try {
       if(titulo.getInicio() =='S'){
-          if(repository.getByInicio('S').equals(null)){
-              throw new BussnessNotFountException("YA EXISTE UNA PUBLICACION PARA INICIO ");
-          }else{
+
               return  repository.save(titulo);
-          }
+
       }else {
           return  repository.save(titulo);
       }
@@ -52,6 +50,7 @@ public class TitutloService {
 
 
         }catch (Exception e){
+            System.out.println(e);
             throw new BussnessNotFountException("ERRPR AL GUARDAR DATOS ");
         }
     }

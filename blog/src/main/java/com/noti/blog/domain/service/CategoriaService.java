@@ -34,7 +34,7 @@ public class CategoriaService {
 
     }
     public Categoria save(Categoria categoria){
-        Categoria categoriaDTO = categoria;
+        Categoria categoriaDTO = repository.save(categoria);
         if(categoriaDTO.equals(null)){
             throw  new BussnessNotFountException("ERROR AL GUARDAR");
         }else {    return categoriaDTO;}

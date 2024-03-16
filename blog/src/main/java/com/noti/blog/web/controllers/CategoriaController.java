@@ -2,6 +2,7 @@ package com.noti.blog.web.controllers;
 
 import com.noti.blog.domain.Categoria;
 import com.noti.blog.domain.service.CategoriaService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,7 +28,7 @@ public class CategoriaController {
        return service.geAll();
     }
 
-    @PostMapping
+    @PostMapping("/save")
     public  Categoria save(@RequestBody Categoria categoria){
         return service.save(categoria);
     }
