@@ -3,9 +3,7 @@ package com.noti.blog.web.controllers;
 import com.noti.blog.domain.Usuario;
 import com.noti.blog.domain.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,5 +16,10 @@ public class UsuarioController {
     @GetMapping("/all")
     public List<Usuario> getAll(){
         return   service.getAll();
+    }
+
+    @PostMapping("/save")
+    public Usuario saveUsuario(@RequestBody  Usuario usuario){
+        return  service.save(usuario);
     }
 }
